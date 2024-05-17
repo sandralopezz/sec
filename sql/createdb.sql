@@ -12,7 +12,7 @@ CREATE TABLE Users (
 
 -- La password de todos los usuarios es iissi
 INSERT INTO Users (userId, fullName, username, password, avatarUrl, city, age) VALUES
-	(1, 'Alfredo Aguirre', 'alfredo', 'pbkdf2:sha256:150000$MjN72ikE$897d960e08be9150d943c747ff6194904fd325821945ff7d7f5c1d1d08b40bbd', 'https://randomuser.me/api/portraits/men/62.jpg', 'Madrid', 25),
+	(1, 'Carlos Arévalo', 'carevalo', 'pbkdf2:sha256:150000$MjN72ikE$897d960e08be9150d943c747ff6194904fd325821945ff7d7f5c1d1d08b40bbd', 'https://randomuser.me/api/portraits/men/62.jpg', 'Sevilla', 25),
 	(2, 'Beatriz Barrios', 'beatriz', 'pbkdf2:sha256:150000$MjN72ikE$897d960e08be9150d943c747ff6194904fd325821945ff7d7f5c1d1d08b40bbd', 'https://randomuser.me/api/portraits/women/10.jpg', 'Barcelona', 30),
 	(3, 'Claudia Carmona', 'claudia', 'pbkdf2:sha256:150000$MjN72ikE$897d960e08be9150d943c747ff6194904fd325821945ff7d7f5c1d1d08b40bbd', 'https://randomuser.me/api/portraits/women/11.jpg', 'Valencia', 35),
   (4, 'David Díaz', 'david', 'pbkdf2:sha256:150000$MjN72ikE$897d960e08be9150d943c747ff6194904fd325821945ff7d7f5c1d1d08b40bbd', 'https://randomuser.me/api/portraits/men/61.jpg', 'Sevilla', 40),
