@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="icon" href="images/favicon.ico" />
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+
+    <script src="js/libs/bootstrap.min.js"></script>
+    <script src="js/libs/axios.min.js"></script>
+    <script src="js/utils/include.js"></script>
+
+    <script src="js/header.js" type="module"></script>
+    <script src="js/create_project.js" type="module"></script>
+
+    <title>Examen IISSI-2</title>
+  </head>
+
+  <body>
+    <div id="page-header"></div>
+
+    <div class="container">
+      <div id="errors"></div>
+
+      <div id="content">
+        <form id="form-project">
+            <div class="form-group">
+                <label for="input-name">Nombre:</label>
+                <input required type="text" class="form-control" id="input-name" name="name"
+                    placeholder="name">
+            </div>
+
+            <div class="form-group">
+                <label for="input-description">Descripcion:</label>
+                <textarea type="text" class="form-control" id="input-description" name="description"
+                    placeholder="description"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="input-projectLeader">Project Leader:</label>
+                <input required type="text" class="form-control" id="input-projectLeader" name="projectLeader"
+                    placeholder="projectLeader"></input>
+            </div>
+
+            <div class="form-group">
+                <label for="input-budget">Budget:</label>
+                <input required type="number" class="form-control" id="input-budget" name="budget"
+                    placeholder="budget">
+            </div>
+
+            <div class="form-group">
+                <label for="input-startingDate">Starting Date:</label>
+                <input required type="date" class="form-control" id="input-startingDate" name="startingDate"
+                    placeholder="startingDate">
+            </div>
+
+            <div class="form-group">
+                <label for="input-endingDate">Ending Date:</label>
+                <input required type="date" class="form-control" id="input-endingDate" name="endingDate"
+                    placeholder="endingDate">
+            </div>
+
+            <div class="form-group">
+                <label for="input-imageUrl">Image URL:</label>
+                <input type="url" class="form-control" id="input-imageUrl" name="imageUrl"
+                    placeholder="imageUrl">
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-md text-center">
+                    <button type="submit" class="btn btn-primary">Send</button>
+                </div>
+            </div>
+        </form>
+      </div>
+    </div>
+    <script>
+      include("header.html", "#page-header");
+    </script>
+  </body>
+</html>

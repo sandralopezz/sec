@@ -1,0 +1,12 @@
+{
+    "getAll": {
+        "description": "Gets all entries from 'projectswithusers'",
+        "route": "/projectswithusers",
+        "method": "GET",
+        "sql": "SELECT * FROM projectswithusers",
+        "auth_required": false,
+        "allowed_roles": [
+            "*"
+        ]
+    }
+}

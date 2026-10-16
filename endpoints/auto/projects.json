@@ -1,0 +1,72 @@
+{
+    "getAll": {
+        "description": "Gets all entries from 'projects'",
+        "route": "/projects",
+        "method": "GET",
+        "sql": "SELECT * FROM projects",
+        "auth_required": false,
+        "allowed_roles": [
+            "*"
+        ]
+    },
+    "getById": {
+        "description": "Gets an entry from 'projects' by its primary key",
+        "route": "/projects/$projectId",
+        "method": "GET",
+        "sql": "SELECT * FROM projects WHERE projectId = $projectId",
+        "auth_required": false,
+        "allowed_roles": [
+            "*"
+        ]
+    },
+    "create": {
+        "description": "Creates a new entry in 'projects'",
+        "route": "/projects",
+        "method": "POST",
+        "sql": "INSERT INTO projects (userId, name, description, projectLeader, budget, startingDate, endingDate, imageUrl) VALUES ($userId, $name, $description, $projectLeader, $budget, $startingDate, $endingDate, $imageUrl)",
+        "request_body_params": [
+            "userId",
+            "name",
+            "description",
+            "projectLeader",
+            "budget",
+            "startingDate",
+            "endingDate",
+            "imageUrl"
+        ],
+        "auth_required": true,
+        "allowed_roles": [
+            "*"
+        ]
+    },
+    "update": {
+        "description": "Updates an existing entry in 'projects' by its primary key",
+        "route": "/projects/$projectId",
+        "method": "PUT",
+        "sql": "UPDATE projects SET userId = $userId, name = $name, description = $description, projectLeader = $projectLeader, budget = $budget, startingDate = $startingDate, endingDate = $endingDate, imageUrl = $imageUrl WHERE projectId = $projectId",
+        "request_body_params": [
+            "userId",
+            "name",
+            "description",
+            "projectLeader",
+            "budget",
+            "startingDate",
+            "endingDate",
+            "imageUrl"
+        ],
+        "auth_required": true,
+        "allowed_roles": [
+            "*"
+        ]
+    },
+    "delete": {
+        "description": "Deletes an existing entry in 'projects' by its primary key",
+        "route": "/projects/$projectId",
+        "method": "DELETE",
+        "sql": "DELETE FROM projects WHERE projectId = $projectId",
+        "auth_required": true,
+        "allowed_roles": [
+            "*"
+        ]
+    }
+}
